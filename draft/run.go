@@ -16,7 +16,11 @@ func DraftRun(config_file *ConfigFile, App *offiaccount.OffiAccount) (string, er
 	//修改空格的问题
 	// content = strings.Replace(content, "@s-;", "&nbsp;", -1)
 
+	println(content)
 	content, _ = HtmlMinify(content)
+
+	println("-----------------")
+	println(content)
 
 	// 	//新增图片素材，获取media_id
 	params := url.Values{}
